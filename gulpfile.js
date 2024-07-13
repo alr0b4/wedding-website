@@ -5,8 +5,6 @@ var sass = require('gulp-sass')(require('sass'));
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
-var deploy = require('gulp-gh-pages');
-
 
 // compile scss to css
 gulp.task('sass', function () {
@@ -32,12 +30,5 @@ gulp.task('minify-js', function () {
 // default task
 gulp.task('default', gulp.series('sass', 'minify-js'));
 
-/**
- * Push build to gh-pages
- */
-gulp.task('deploy', ['sass', 'minify-js'], function () {
-    return gulp.src(".dist/**/*")
-      .pipe(deploy())
-  });
 
   
