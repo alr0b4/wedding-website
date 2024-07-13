@@ -136,7 +136,7 @@ $(document).ready(function () {
 
     });
 
-    /********************** Social Share buttons ***********************/
+    /********************** Social Share buttons ****************
     var share_bar = document.getElementsByClassName('share-bar');
     var po = document.createElement('script');
     po.type = 'text/javascript';
@@ -159,20 +159,29 @@ $(document).ready(function () {
 
         share_bar[i].innerHTML = html;
         share_bar[i].style.display = 'inline-block';
-    }
+    }*******/
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
 
 
     /********************** Toggle Map Content **********************/
-    $('#btn-show-map').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+    $('#btn-show-map1').click(function () {
+        $('#map-content1').toggleClass('toggle-map-content');
+        $('#btn-show-content1').toggleClass('toggle-map-content');
     });
-    $('#btn-show-content').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+    $('#btn-show-content1').click(function () {
+        $('#map-content1').toggleClass('toggle-map-content');
+        $('#btn-show-content1').toggleClass('toggle-map-content');
+    });
+
+    $('#btn-show-map2').click(function () {
+        $('#map-content2').toggleClass('toggle-map-content');
+        $('#btn-show-content2').toggleClass('toggle-map-content');
+    });
+    $('#btn-show-content2').click(function () {
+        $('#map-content2').toggleClass('toggle-map-content');
+        $('#btn-show-content2').toggleClass('toggle-map-content');
     });
 
     /********************** Add to Calendar **********************/
@@ -184,23 +193,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Boda de Sophie y Álvaro",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Feb 22, 2025 12:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Feb 22, 2025 00:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Av. de la Iglesia, LAs Rozas de Madrid',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "Estamos deseando verte en nuestro gran día. Para cualquier consulta o problema, ponte en contacto con Álvaro en el 686116295."
         }
     });
 
@@ -212,13 +221,13 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Un momento!</strong> Estamos guardando los datos.'));
 
         if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+            && MD5($('#invite_code').val()) !== '12eb9d9344ecd1619cc195d0678fcc80') {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Lo siento!</strong> Tu código de invitación es incorrecto.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbysN3Ug3NPqI6bWI-kK_JpKzl5ydVZ38kBbzkhYYiVbrDTOdipfFGj7dbcYBb3qrkM/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -230,7 +239,7 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Lo siento!</strong> Hay problemas con el servidor. '));
                 });
         }
     });
@@ -241,22 +250,34 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    var location1 = {lat: 40.4918564, lng: -3.8770194};
+    var map1 = new google.maps.Map(document.getElementById('map-canvas1'), {
         zoom: 15,
-        center: location,
+        center: location1,
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
+    var marker1 = new google.maps.Marker({
+        position: location1,
+        map: map1
+    });
+
+    var location2 = {lat: 40.476945, lng: -3.995894};
+    var map2 = new google.maps.Map(document.getElementById('map-canvas2'), {
+        zoom: 15,
+        center: location2,
+        scrollwheel: false
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: location2,
+        map: map2
     });
 }
 
-function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+/*function initBBSRMap() {
+    var la_fiesta = {lat: 40.4918564, lng: -3.8770194};
+    var map1 = new google.maps.Map(document.getElementById('map-canvas1'), {
         zoom: 15,
         center: la_fiesta,
         scrollwheel: false
@@ -264,9 +285,9 @@ function initBBSRMap() {
 
     var marker = new google.maps.Marker({
         position: la_fiesta,
-        map: map
+        map: map1
     });
-}
+}*/
 
 // alert_markup
 function alert_markup(alert_type, msg) {
