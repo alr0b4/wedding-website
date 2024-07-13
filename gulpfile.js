@@ -7,13 +7,6 @@ var rename = require('gulp-rename');
 
 var deploy = require('gulp-gh-pages');
 
-/**
- * Push build to gh-pages
- */
-gulp.task('deploy', ['default'], function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
 
 // compile scss to css
 gulp.task('sass', function () {
@@ -38,5 +31,13 @@ gulp.task('minify-js', function () {
 
 // default task
 gulp.task('default', gulp.series('sass', 'minify-js'));
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['sass', 'minify-js'], function () {
+    return gulp.src("./**/*")
+      .pipe(deploy())
+  });
 
   
