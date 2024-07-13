@@ -5,6 +5,16 @@ var sass = require('gulp-sass')(require('sass'));
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
+var deploy = require('gulp-gh-pages');
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['default'], function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
+
 // compile scss to css
 gulp.task('sass', function () {
     return gulp.src('./sass/styles.scss')
