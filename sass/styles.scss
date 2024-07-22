@@ -788,7 +788,7 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-bottom: 60px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
@@ -821,14 +821,14 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, .fa-bus, .fa-cutlery {
+      i.fa-user, i.fa-users, i.fa-envelope, i.fa-key, i.fa-bus, i.fa-cutlery {
         font-size: 14px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         margin-left: 20px;
       }
-      input {
+      input, select {
         padding-left: 68px;
         width: 100%;
         height: 100%;
@@ -848,6 +848,18 @@ RSVP form
       }
       input:-ms-input-placeholder {
         color: $form-placeholder;
+      }
+      select {
+        appearance: none; /* Remove default arrow for better styling */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+        background-size: 18px 18px; /* Size of the arrow */
+      }
+      select[multiple] {
+        background: none; /* Remove the arrow for multi-select */
+        height: auto; /* Allow height to expand */
+        padding-left: 68px; /* Same padding as input */
       }
     }
   }
@@ -898,4 +910,11 @@ body.modal-open {
 }
 .modal-body {
   padding:25px;
+}
+
+/* ==========================================================================
+REGALOS
+========================================================================== */
+#regalos {
+  padding-bottom: 100px;
 }
