@@ -223,7 +223,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Un momento!</strong> Estamos guardando los datos.'));
 
-        if (MD5($('#invite_code').val()) !== '6b1a864b240fc77e3a901e3470b243f9' || MD5($('#invite_code').val()) !== '6a4431c2173a2f065f60492e7a44212c') {
+        if (MD5($('#invite_code').val()) !== '6b1a864b240fc77e3a901e3470b243f9' && MD5($('#invite_code').val()) !== '6a4431c2173a2f065f60492e7a44212c') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Lo siento!</strong> Tu código de invitación es incorrecto.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbx--pHnVpi78FSQvu6r5jIrKa-k-Cl5EkMm4UBuGi3vysd8tfu_uGQV7IJGceURZnki/exec', data)
