@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Sophie & Álvaro">
     <meta property="og:description" content="Os invitamos a nuestro gran día!">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero_sya_shadow.png">
+    <meta property="og:image" content="img/hero_sya_shadow.jpg">
     <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -246,7 +246,7 @@
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/lfg-sm.png" alt=""/>
+                        <img src="img/eng_pics/lfg-sm.jpg" alt=""/>
                     </div>
                 </a>
             </div>
@@ -256,47 +256,47 @@
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/aleti-sm.png" alt=""/>
+                        <img src="img/eng_pics/aleti-sm.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_1.png">
+                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_1.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/foto_islandia_1.png" alt=""/>
+                        <img src="img/eng_pics/foto_islandia_1.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_4.png">
+                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_4.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/foto_islandia_4.png" alt=""/>
+                        <img src="img/eng_pics/foto_islandia_4.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_2.png">
+                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_2.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/foto_islandia_2.png" alt=""/>
+                        <img src="img/eng_pics/foto_islandia_2.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_3.png">
+                <a class="fancybox" rel="group" href="img/eng_pics/foto_islandia_3.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/foto_islandia_3.png" alt=""/>
+                        <img src="img/eng_pics/foto_islandia_3.jpg" alt=""/>
                     </div>
                 </a>
             </div>
@@ -452,13 +452,18 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Pareja o niños"
-                                                                  required>
+                                <i class="fa fa-bus"></i>
+                                <select name="bus" required>
+                                    <option value="" disabled>¿Necesitarías transporte?</option>
+                                    <option value="no">No</option>
+                                    <option value="ida">Solo ida</option>
+                                    <option value="ida">Solo vuelta</option>
+                                    <option value="ida_vuelta">Ida y vuelta</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
@@ -470,17 +475,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-bus"></i>
-                                <select name="bus" required>
-                                    <option value="" disabled>¿Necesitarías transporte?</option>
-                                    <option value="no">No</option>
-                                    <option value="ida">Solo ida</option>
-                                    <option value="ida_vuelta_lrz">Ida y vuelta (Las Rozas)</option>
-                                    <option value="ida_vuelta_mad">Ida y vuelta (Moncloa)</option>
-                                </select>
-                            </div>
+                            <!--<div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Pareja o niños"
+                                                                  required>
+                            </div>-->
                         </div>
+                        
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
@@ -524,7 +526,7 @@
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
                 <p>Hecho por Álvaro con mucho <span class="fa fa-heart pulse2"></span> para Sophie</p>
-                <p>Kudos to <a href="https://github.com/rampatra/wedding-website">rampatra</a></p>
+                <!--<p>Kudos to <a href="https://github.com/rampatra/wedding-website">rampatra</a></p>-->
             </div>
         </div>
     </div>
